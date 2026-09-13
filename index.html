@@ -267,6 +267,13 @@
   .g1 .pr{font-size:34px !important} .g2 .pr{font-size:32px !important} .g3 .pr{font-size:28px !important}
   .g4 .pr{font-size:24px !important} .g5 .pr{font-size:20px !important} .g6 .pr{font-size:18px !important}
   .g7 .pr{font-size:16px !important} .g8 .pr{font-size:15px !important} .g9 .pr{font-size:14px !important}
+
+  /* ==== DBH: 金額サイズをPSA版と同じ大きさに(名前は残す) ==== */
+  .pr{ font-weight:900 !important; letter-spacing:-0.5px; padding:2px 12px !important; }
+  .pr .y{ font-size:.55em !important; }
+  .g1 .pr{font-size:58px !important} .g2 .pr{font-size:54px !important} .g3 .pr{font-size:48px !important}
+  .g4 .pr{font-size:40px !important} .g5 .pr{font-size:33px !important} .g6 .pr{font-size:29px !important}
+  .g7 .pr{font-size:25px !important} .g8 .pr{font-size:22px !important} .g9 .pr{font-size:20px !important}
 </style>
 </head>
 <body>
@@ -529,7 +536,6 @@
       var code=(x.code||'').trim();
       var price=isNum(x.buy)?('¥'+yen(x.buy)):'';
       var line=nm + (code?(' ('+code+')'):'') + (price?(' '+price):'');
-      if(x.psa) line+=' PSA10';
       return line;
     });
     var text=lines.join('\n');
